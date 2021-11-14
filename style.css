@@ -1,0 +1,102 @@
+body {
+   display: flex;
+   background: cornflowerblue;
+   min-height: 100vh;
+   justify-content: center;
+   flex-direction: column;
+}
+.main {
+   
+}
+.headline {
+
+}
+.converter {
+   background-color: #fff;
+   padding: 20px 10px;
+   border-radius: 30px;
+   width: clamp(200px, 370px, 600px);
+   margin: 0 auto;
+   position: relative;
+}
+.converter__header {
+   font-size: 28px;
+   font-weight: 500;
+   text-align: center;
+}
+.converter-currency {
+   margin-top: 20px;
+   /*display: flex;*/
+   /*align-items: cen//ter;*/
+   /*justify-content: center;*/
+}
+.converter__input {
+   width: 100%;
+   outline: none;
+   border: 1px solid #999; 
+   height: 40px;
+   padding: 0 15px;
+   border-radius: 5px;
+   margin-top: 20px;
+}
+.converter__input:focus {
+   border: 2px solid blue;
+   padding: 0 14px;
+}
+.select-box {
+   display: flex;
+   height: 45px;
+   width: 115px;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid #999;
+}
+.select-box img{
+   max-width: 25px;
+}
+.select-box select {
+   width: auto;
+   font-size: 16px;
+   margin: 0 -5px 0 5px;
+}
+.converter__wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.select-box {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid #999;
+   border-radius: 5px;
+}
+.select-box select {
+   width: auto;
+   border: none;
+}
+.select-box select option {
+   width: 100%;
+}
+.select-box img {
+   max-width: 25px;
+}
+.icon {
+   font-size: 22px;
+   margin-top: 25px;
+}
+.converter__button {
+   position: absolute;
+   content: '';
+   bottom: -15%;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   text-align: center;
+}
+.convert-btn {
+   padding: 10px 20px;
+   text-transform: uppercase;
+   background: cornflowerblue;
+   cursor: pointer;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Currency Converter</title>
+   <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+   <link rel="stylesheet" href="font-awesome.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <main class="main">
+      <div class="converter">
+         <div class="converter__header">
+            Currency Converter
+         </div>
+         <div class="converter__amount">
+            Enter amount
+            <input id='#amount' class="converter__input" type="text">
+         </div>
+         <div class="converter__wrapper">
+            <div class="converter-currency">
+               <div class="headline">From</div>
+               <div class="select-box">
+                  <img src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" alt="">
+                  <select id="currency-from">
+                     <!--<option value="USD">USD</option>-->
+                     <!--<option value="RUB">RUB</option>-->
+                  </select>
+               </div>
+            </div>
+            <div class="icon">
+               <i class="fa fa-exchange"></i>
+            </div>
+            <div class="converter-currency">
+               <div class="headline">To</div>
+               <div class="select-box">
+                  <img src="http://purecatamphetamine.github.io/country-flag-icons/3x2/RU.svg" alt="">
+                  <select id="currency-to">
+                     <!--<option value="RUB">RUB</option>-->
+                     <!--<option value="USD">USD</option>-->
+                  </select>
+               </div>
+            </div>
+            <div class="result"></div>
+         </div>
+
+         <div class="converter__button">
+            <button id='convert' class="convert-btn">
+               Convert
+            </button>
+         </div>
+      </div>
+   </main>
+   <script src="https://use.fontawesome.com/189cad0192.js"></script>
+   <script src="script.js"></script>
+</body>
+
+</html>
