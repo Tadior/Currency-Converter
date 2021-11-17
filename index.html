@@ -8,6 +8,9 @@
    <title>Currency Converter</title>
    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
    <link rel="stylesheet" href="font-awesome.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,12 +21,14 @@
             Currency Converter
          </div>
          <div class="converter__amount">
-            Enter amount
-            <input id='#amount' class="converter__input" type="text">
+            <div class="title-amount">
+               Enter amount
+            </div>
+            <input id='amount' class="converter__input" type="text" placeholder="Input number">
          </div>
          <div class="converter__wrapper">
             <div class="converter-currency">
-               <div class="headline">From</div>
+               <div class="headline headline--from">From</div>
                <div class="select-box">
                   <img src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" alt="">
                   <select id="currency-from">
@@ -36,7 +41,7 @@
                <i class="fa fa-exchange"></i>
             </div>
             <div class="converter-currency">
-               <div class="headline">To</div>
+               <div class="headline headline--to">To</div>
                <div class="select-box">
                   <img src="http://purecatamphetamine.github.io/country-flag-icons/3x2/RU.svg" alt="">
                   <select id="currency-to">
@@ -45,13 +50,21 @@
                   </select>
                </div>
             </div>
-            <div class="result"></div>
+            <div id="output" class="output"></div>
          </div>
 
          <div class="converter__button">
             <button id='convert' class="convert-btn">
                Convert
             </button>
+         </div>
+         <div class="converter-languages">
+            <div id="Russian" class="language-item">
+               <img class="language-img language" data-lang = 'RU' src="http://purecatamphetamine.github.io/country-flag-icons/3x2/RU.svg" alt="">
+            </div>
+            <div id="English" class="language-item">
+               <img class="language-img language language--active" data-lang = 'EN' src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" alt="">
+            </div>
          </div>
       </div>
    </main>

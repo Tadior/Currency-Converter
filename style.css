@@ -1,27 +1,31 @@
 body {
    display: flex;
-   background: cornflowerblue;
+   /*background: cornflowerblue;*/
+   background: #34495E;
    min-height: 100vh;
    justify-content: center;
    flex-direction: column;
+   font-family: 'Oswald',serif;
+   font-size: 19px;
 }
 .main {
    
 }
 .headline {
-
+   margin-bottom: 8px;
 }
 .converter {
    background-color: #fff;
    padding: 20px 10px;
    border-radius: 30px;
    width: clamp(200px, 370px, 600px);
+   height: 275px;
    margin: 0 auto;
    position: relative;
 }
 .converter__header {
    font-size: 28px;
-   font-weight: 500;
+   font-weight: 600;
    text-align: center;
 }
 .converter-currency {
@@ -30,8 +34,15 @@ body {
    /*align-items: cen//ter;*/
    /*justify-content: center;*/
 }
+.converter__amount {
+   display: flex;
+   margin-top: 15px;
+   /*align-items: center;*/
+   flex-direction: column;
+}
 .converter__input {
-   width: 100%;
+   flex: auto 1 1;
+   /*width: 100%;*/
    outline: none;
    border: 1px solid #999; 
    height: 40px;
@@ -61,8 +72,9 @@ body {
 }
 .converter__wrapper {
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
+   flex-wrap: wrap;
 }
 .select-box {
    display: flex;
@@ -70,10 +82,12 @@ body {
    justify-content: center;
    border: 1px solid #999;
    border-radius: 5px;
+   cursor: pointer;
 }
 .select-box select {
    width: auto;
    border: none;
+   cursor: pointer;
 }
 .select-box select option {
    width: 100%;
@@ -84,11 +98,12 @@ body {
 .icon {
    font-size: 22px;
    margin-top: 25px;
+   cursor: pointer;
 }
 .converter__button {
    position: absolute;
    content: '';
-   bottom: -15%;
+   bottom: -22.5px;
    left: 0;
    right: 0;
    margin: 0 auto;
@@ -97,6 +112,38 @@ body {
 .convert-btn {
    padding: 10px 20px;
    text-transform: uppercase;
-   background: cornflowerblue;
+   /*background: cornflowerblue;*/
+   background: #27AE60;
    cursor: pointer;
+}
+.output {
+   margin-top: 15px;
+   flex: 1 1 100%;
+   text-align: center;
+}
+.error {
+   color: red;
+   font-weight: 600;
+}
+.converter-languages {
+   position: absolute;
+   content: '';
+   top: -25px;
+   right: 0;
+   z-index: 2;
+   display: flex;
+   justify-content: space-between;
+   width: 70px;
+}
+.language {
+   /*width: 100%;*/
+   width: 30px;
+   cursor: pointer;
+}
+.language-img {
+   max-width: 30px;
+}
+.language--active {
+   border: 2px solid #E67E22;
+   border-radius: 2px;
 }
