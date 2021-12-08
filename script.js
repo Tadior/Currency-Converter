@@ -5,6 +5,7 @@ const inputTo = document.querySelector('#currency-to');
 const selectBoxes = document.querySelectorAll('.select-box');
 const convertButton = document.querySelector('#convert');
 const amount = document.querySelector('#amount');
+const converterWrapper = document.querySelector('.converter__wrapper');
 const apiKey = '914d1b78d615771f93ba';
 const mainUrl = `https://free.currconv.com`;
 const listOfCurrenciesURL = mainUrl + `/api/v7/currencies?apiKey=${apiKey}`;
@@ -134,6 +135,11 @@ function swapCurrency() {
    const currentValue = inputFrom.value;
    inputFrom.value = inputTo.value;
    inputTo.value = currentValue;
+   const flagFrom = inputFrom.parentNode.querySelector('img');
+   const flagTo = inputTo.parentNode.querySelector('img');
+   const flagToSrc = flagTo.src;
+   flagTo.src = flagFrom.src;
+   flagFrom.src = flagToSrc;
 }
 // set event for buttin swap / Задаем событие для смены мест валюты
 buttonSwap.addEventListener('click', swapCurrency);
@@ -173,7 +179,7 @@ convertButton.addEventListener('click', convert);
 //----------------------------------------------------------
 
 // Function switch language of application / Функция переключает язык веб приложения
-function selectLanguage() {
+function selectLanguage(event) {
    if(event.target.classList.contains('language')) { // event.target checking / Проверка элемента по которому кликнули
       if (event.target.classList.contains('language--active')) {
          return false;
